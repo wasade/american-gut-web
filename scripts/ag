@@ -79,9 +79,9 @@ def make_test_db():
     conn.close()
 
     # Connect to the postgres server, but this time to the just created db
-    conn = SQLConnectionHandler()
-    print("Creating schema")
-    conn.execute('CREATE SCHEMA ag')
+    #conn = SQLConnectionHandler()
+    #print("Creating schema")
+    #conn.execute('CREATE SCHEMA ag')
 
     print("Inserting procedures")
     procedures_dirpath = join(dirname(dirname(abspath(__file__))), "amgut",

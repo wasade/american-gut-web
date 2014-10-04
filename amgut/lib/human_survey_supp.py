@@ -16,13 +16,13 @@ key_map = {}
 question_group = defaultdict(list)
 
 # the question group order according to the approved questionnaire
-group_order = ['GENERAL_DIET', 'GENERAL', 'LIFESTYLE_HYGIENE', 'HEALTH',
-               'DETAILED_DIET']
+group_order = ['PERSONAL_PROMPT', 'GENERAL_DIET', 'GENERAL',
+               'LIFESTYLE_HYGIENE', 'HEALTH', 'DETAILED_DIET',
+               'OPEN_COMMENT']
 
 question_idx = re.compile('([0-9.]+)')
 for text_key, values in viewitems(text_locale['human_survey.html']):
     if (text_key.startswith('SUPPLEMENT')
-            or text_key.startswith('PERSONAL')
             or text_key.endswith('TITLE')):
         continue
 
@@ -42,27 +42,27 @@ for text_key, values in viewitems(text_locale['human_survey.html']):
 # the responses are all indices, where 0 corresponses to _NO_RESPONSE
 supplemental_map = {
     'GENERAL_DIET_QUESTION_5':
-        ((1,), 'SUPPLEMENTAL_MEDICATION'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_94'),  # triggered on Yes
     'GENERAL_DIET_QUESTION_11':
-        ((1,), 'SUPPLEMENTAL_DIET'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_92'),  # triggered on Yes
     'GENERAL_QUESTION_13':
-        ((5,), 'SUPPLEMENTAL_RICE'),  # triggered on Other
+        ((5,), 'SUPPLEMENTAL_QUESTION_93'),  # triggered on Other
     'GENERAL_QUESTION_15':
-        ((1, 2, 3), 'SUPPLEMENTAL_TRAVEL'),  # triggered on Month, 3 months, 6 months
+        ((1, 2, 3), 'SUPPLEMENTAL_QUESTION_95'),  # triggered on Month, 3 months, 6 months
     'GENERAL_QUESTION_17':
-        ((1,), 'SUPPLEMENTAL_RELATIONSHIP'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_96'),  # triggered on Yes
     'GENERAL_QUESTION_19':
-        ((1,), 'SUPPLEMENTAL_PETS'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_97'),  # triggered on Yes
     'GENERAL_QUESTION_20':
-        ((1,), 'SUPPLEMENTAL_PETS'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_97'),  # triggered on Yes
     'HEALTH_QUESTION_38':
-        ((1, 2), 'SUPPLEMENTAL_ANTIBIOTICS'),  # triggered on Week, Month
+        ((1, 2), 'SUPPLEMENTAL_QUESTION_100'),  # triggered on Week, Month
     'HEALTH_QUESTION_41':
-        ((1,), 'SUPPLEMENTAL_PREGNANCY'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_103'),  # triggered on Yes
     'HEALTH_QUESTION_48':
-        ((1,), 'SUPPLEMENTAL_MEDICATION'),  # triggered on Yes
+        ((1,), 'SUPPLEMENTAL_QUESTION_94'),  # triggered on Yes
     'HEALTH_QUESTION_51.23':
-        ((2, 3, 4,), 'SUPPLEMENTAL_OTHER_CONDITIONS'),  # triggered on Other
+        ((2, 3, 4,), 'SUPPLEMENTAL_QUESTION_104'),  # triggered on Other
     }
 
 # associates the question with its type, where SINGLE is a question with only
@@ -165,4 +165,29 @@ question_type = {
     'DETAILED_DIET_QUESTION_74': 'SINGLE',
     'DETAILED_DIET_QUESTION_75': 'SINGLE',
     'DETAILED_DIET_QUESTION_76': 'SINGLE',
-    'DETAILED_DIET_QUESTION_77': 'SINGLE'}
+    'DETAILED_DIET_QUESTION_77': 'SINGLE',
+    'PERSONAL_PROMPT_QUESTION_80': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_81': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_82': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_83': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_84': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_85': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_86': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_87': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_88': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_89': 'STRING',
+    'PERSONAL_PROMPT_QUESTION_90': 'STRING',
+    'OPEN_COMMENT_QUESTION_91': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_92': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_93': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_94': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_95': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_96': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_97': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_98': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_99': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_100': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_101': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_102': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_103': 'TEXT',
+    'SUPPLEMENTAL_QUESTION_104': 'TEXT'}

@@ -47,7 +47,7 @@ STATIC_PATH = join(DIRNAME, "static")
 TEMPLATE_PATH = join(DIRNAME, "templates")  # base folder for webpages
 RES_PATH = join(DIRNAME, "results")
 COOKIE_SECRET = b64encode(uuid4().bytes + uuid4().bytes)
-DEBUG = True
+DEBUG = AMGUT_CONFIG.debug
 
 
 class QiimeWebApplication(Application):
@@ -98,9 +98,9 @@ class QiimeWebApplication(Application):
 
 
 def main():
-    options.log_file_prefix = ("AMGUT_%d_%s.log" %
-                               (options.port, str(datetime.now())))
-    options.logging = 'warning'
+    #options.log_file_prefix = ("AMGUT_%d_%s.log" %
+    #                           (options.port, str(datetime.now())))
+    #options.logging = 'warning'
     parse_command_line()
     http_server = HTTPServer(QiimeWebApplication())
     http_server.listen(options.port)

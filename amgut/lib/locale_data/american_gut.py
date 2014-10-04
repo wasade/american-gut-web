@@ -756,17 +756,17 @@ _HUMAN_SURVEY_COMPLETED = {
 _HUMAN_SURVEY = {
     # Personal information
     'PERSONAL_PROMPT_TITLE': 'Personal information',
-    'PERSONAL_PROMPT_NAME': 'Name:',
-    'PERSONAL_PROMPT_GENDER': 'Gender:',
-    'PERSONAL_PROMPT_HEIGHT': 'Height',
-    'PERSONAL_PROMPT_COUNTRY_OF_BIRTH': 'Country of birth:',
-    'PERSONAL_PROMPT_TODAYSDATE': 'Today\'s date:',
-    'PERSONAL_PROMPT_BIRTHDATE_MONTH': 'Birth month:',
-    'PERSONAL_PROMPT_BIRTHDATE_YEAR': 'Birth year:',
-    'PERSONAL_PROMPT_WEIGHT': 'Weight:',
-    'PERSONAL_PROMPT_ZIP': 'Current ZIP code:',
-    'PERSONAL_PROMPT_WEIGHT_UNITS': 'Weight units:',
-    'PERSONAL_PROMPT_HEIGHT_UNITS': 'Height units:',
+    'PERSONAL_PROMPT_QUESTION_80': 'Name:',
+    'PERSONAL_PROMPT_QUESTION_81': 'Gender:',
+    'PERSONAL_PROMPT_QUESTION_82': 'Height',
+    'PERSONAL_PROMPT_QUESTION_83': 'Height units:',
+    'PERSONAL_PROMPT_QUESTION_84': 'Country of birth:',
+    'PERSONAL_PROMPT_QUESTION_85': 'Today\'s date:',
+    'PERSONAL_PROMPT_QUESTION_86': 'Birth month:',
+    'PERSONAL_PROMPT_QUESTION_87': 'Birth year:',
+    'PERSONAL_PROMPT_QUESTION_88': 'Weight:',
+    'PERSONAL_PROMPT_QUESTION_89': 'Weight units:',
+    'PERSONAL_PROMPT_QUESTION_90': 'Current ZIP code:',
 
     # General diet information
     'GENERAL_DIET_TITLE': 'General Diet Information',
@@ -1179,20 +1179,22 @@ _HUMAN_SURVEY = {
     'DETAILED_DIET_QUESTION_77_CHOICES': _FREQUENCY_WEEK_CHOICES,
 
     # Supplemental questions
-    'SUPPLEMENTAL_DIET': 'Dietary Supplements/Dietary Restrictions:',
-    'SUPPLEMENTAL_RICE': 'Race/ethnicity:',
-    'SUPPLEMENTAL_MEDICATION': 'Over the counter and prescription medication:',
-    'SUPPLEMENTAL_TRAVEL': 'Travel:',
-    'SUPPLEMENTAL_RELATIONSHIP': 'What is your relationship to other people in this study who have voluntarily told you of their participation (e.g. partner, children, roommates)?  For children, please specify whether or not you are genetically related.  Note that we will only use information that both parties provide.',
-    'SUPPLEMENTAL_PETS': 'Pets',
-    'SUPPLEMENTAL_PETS_INOUTDOOR': 'Indoor/outdoor or confined (cage/tank):',
-    'SUPPLEMENTAL_PETS_CONTACT': 'Contact extent:',
-    'SUPPLEMENTAL_ANTIBIOTICS': 'Antibiotic/s:',
-    'SUPPLEMENTAL_ANTIBIOTICS_NAME': 'Name:',
-    'SUPPLEMENTAL_ANTIBIOTICS_TREATMENT': 'Treatment for:',
-    'SUPPLEMENTAL_PREGNANCY': 'Pregnancy due date:',
-    'SUPPLEMENTAL_OTHER_CONDITIONS': 'Other conditions you suffer from that were not listed in the diagnosed conditions question',
-    'SUPPLEMENTAL_OPEN_COMMENT': 'Please write anything else about yourself that you think could affect your personal microorganisms.'
+    'SUPPLEMENTAL_QUESTION_92': 'Dietary Supplements/Dietary Restrictions:',
+    'SUPPLEMENTAL_QUESTION_93': 'Race/ethnicity:',
+    'SUPPLEMENTAL_QUESTION_94': 'Over the counter and prescription medication:',
+    'SUPPLEMENTAL_QUESTION_95': 'Travel:',
+    'SUPPLEMENTAL_QUESTION_96': 'What is your relationship to other people in this study who have voluntarily told you of their participation (e.g. partner, children, roommates)?  For children, please specify whether or not you are genetically related.  Note that we will only use information that both parties provide.',
+    'SUPPLEMENTAL_QUESTION_97': 'Pets',
+    'SUPPLEMENTAL_QUESTION_98': 'Indoor/outdoor or confined (cage/tank):',
+    'SUPPLEMENTAL_QUESTION_99': 'Contact extent:',
+    'SUPPLEMENTAL_QUESTION_100': 'Antibiotic/s:',
+    'SUPPLEMENTAL_QUESTION_101': 'Name:', # antibiotic name
+    'SUPPLEMENTAL_QUESTION_102': 'Treatment for:', # antibiotic treatment
+    'SUPPLEMENTAL_QUESTION_103': 'Pregnancy due date:',
+    'SUPPLEMENTAL_QUESTION_104': 'Other conditions you suffer from that were not listed in the diagnosed conditions question',
+
+    'OPEN_COMMENT_TITLE': 'Anything else?',
+    'OPEN_COMMENT_QUESTION_91': 'Please write anything else about yourself that you think could affect your personal microorganisms.'
 }
 
 _SURVEY_MAIN = {

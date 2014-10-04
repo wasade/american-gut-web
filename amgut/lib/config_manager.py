@@ -108,7 +108,7 @@ class ConfigurationManager(object):
     def _get_main(self, config):
         """Get the configuration of the main section"""
         expected_options = {'name', 'shorthand', 'test_environment',
-                            'base_data_dir', 'locale'}
+                            'base_data_dir', 'locale', 'debug'}
         _warn_on_extra(set(config.options('main')) - expected_options,
                        'main section option(s)')
 
@@ -120,6 +120,7 @@ class ConfigurationManager(object):
         self.test_environment = getboolean('TEST_ENVIRONMENT')
         self.base_data_dir = get('BASE_DATA_DIR')
         self.locale = get('LOCALE')
+        self.debug = getboolean('debug')
 
         if not exists(self.base_data_dir):
             raise IOError("Directory %s does not exist!" % self.base_data_dir)
